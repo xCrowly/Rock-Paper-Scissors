@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <script src="./javaScript/app.js" charset="UTF-8"></script>
+
+    <title>Rock, Paper, Scissors</title>
 </head>
 
-<body class="main-body">
+<body>
+    <div class="header">Rock-Paper-Scissors</div>
     <img class="header-img" src="../../Resources/pexels-pavel-danilyuk-81113112.jpg" alt="RPS">
-    <h1 class="score">Me 0:0 You</h1>
+    <div class="score-board">
+        <span class="user-score">0</span>:<span class="computer-score">0</span>
+    </div>
     <h1 class="winner">I win</h1>
     <div class="img-container">
-
-        <img class="img-container-item rock" src="../Rock-Paper-Scissors/res/rock.png" alt="RPS">
-        <img class="img-container-item paper" src="../Rock-Paper-Scissors/res/paper.png" alt="RPS">
-        <img class="img-container-item scissors" src="../Rock-Paper-Scissors/res/scissors.png" alt="RPS">
-        
+    
+            <img class="img-container-item" id="rock" src="../Rock-Paper-Scissors/res/rock.png" alt="RPS">  
+            <img class="img-container-item" id="paper" src="../Rock-Paper-Scissors/res/paper.png" alt="RPS">
+            <img class="img-container-item" id="scissors" src="../Rock-Paper-Scissors/res/scissors.png" alt="RPS">
+            
     </div>
+    <script src="./javaScript/app.js" charset="UTF-8"></script>
 </body>
-
 </html>

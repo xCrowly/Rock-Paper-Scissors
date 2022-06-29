@@ -1,47 +1,66 @@
 :root {
-    --imgWidth: 400px;
-
+    --imgWidth: 360px;
 }
 
-.main-body {
-    background: rgb(236, 240, 241);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(148, 197, 163);
+    margin-bottom: 400px;
+}
+
+.header {
+    text-align: center;
+    font-style: bold;
+    font-size: 40px;
+    background-color: antiquewhite;
+    padding: 25px;
 }
 
 .header-img {
     display: flex;
     height: auto;
     width: var(--imgWidth);
+    margin-top: 20px;
     margin-left: calc(100% / 2 - var(--imgWidth) / 2);
     border-radius: 15px;
     box-shadow: 0px 10px 15px rgb(0 0 0/30%);
 }
 
-.score {
+.score-board {
     font-size: 40px;
-    margin-left: calc(100% / 2 - 80px);
+    text-align: center;
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
+    margin-top: 20px;
+    border: whitesmoke;
+
 }
 
 .winner {
     font-size: 40px;
-    margin-left: calc(100% / 2 - 30px);
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
+    text-align: center;
 }
 
 .img-container {
     display: flex;
     margin-left: calc(100% / 2 - var(--imgWidth) / 2);
     margin-top: 100px;
+
 }
 
 .img-container-item {
-    width: 120px;
-    margin: calc(40px / 5);
+    width: 110px;
+    margin: calc(30px / 5);
     border-radius: 15px;
 }
 
 .img-container-item:hover {
     transform: scale(.9);
-    box-shadow: 0px 10px 15px rgb(0 0 0/30%);
+    box-shadow: 0px 10px 20px rgb(0 0 0/50%);
     cursor: pointer;
 }
