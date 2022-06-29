@@ -9,7 +9,8 @@
 }
 
 body {
-    background: rgb(148, 197, 163);
+    background: #2E3D3C;
+    
     margin-bottom: 400px;
 }
 
@@ -32,6 +33,7 @@ body {
 }
 
 .score-board {
+    color: antiquewhite;
     font-size: 40px;
     text-align: center;
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
@@ -44,12 +46,13 @@ body {
     font-size: 40px;
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
     text-align: center;
+    color: antiquewhite;
 }
 
 .img-container {
     display: flex;
     margin-left: calc(100% / 2 - var(--imgWidth) / 2);
-    margin-top: 100px;
+    margin-top: 60px;
 
 }
 
@@ -63,4 +66,29 @@ body {
     transform: scale(.9);
     box-shadow: 0px 10px 20px rgb(0 0 0/50%);
     cursor: pointer;
+}
+
+.go-ahead {
+    font-size: 30px;
+    text-shadow: 5px 2px 3px rgb(0 0 0/20%);
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 10px;
+    animation: scaling 2s ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes scaling {
+    0%{
+        transform: scale(.85);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(.85);
+    }
+
+    
 }
