@@ -1,8 +1,8 @@
-const userScore = 0;
-const computerScore = 0;
-const userScore_span = document.getElementById("user-score");
-const computerScore_span = document.getElementById("computer-score");
-const winnerText = document.getElementById("winner");
+var userScore = 0;
+var computerScore = 0;
+var userScore_span = document.getElementById("user-score");
+var computerScore_span = document.getElementById("computer-score");
+var winnerText = document.getElementById("winner");
 const rockBut = document.getElementById("rock");
 const paperBut = document.getElementById("paper");
 const scissorsBut = document.getElementById("scissors");
@@ -10,52 +10,58 @@ const scissorsBut = document.getElementById("scissors");
 function getUserChoice(choice) {
     console.log("you choosed " + choice);
     var ran = randomChoice();
-    // console.log(randomNumber());
-    // if (choice === "paper") {
-    //     if (ran === "scissors") {
-    //         console.log("You lose, scissors");
-    //     } else if (ran === "rock") {
-    //         console.log("You win, rock");
-    //     } else {
-    //         console.log("Draw, paper");
-    //     }
-    // } else if (choice === "rock") {
-    //     if (ran === "scissors") {
-    //         console.log("You win, scissors");
-    //     } else if (ran === "rock") {
-    //         console.log("Draw, rock");
-    //     } else {
-    //         console.log("You lose, paper");
-    //     }
-    // } else {
-    //     if (ran === "scissors") {
-    //         console.log("Draw, scissors");
-    //     } else if (ran === "rock") {
-    //         console.log("You lose, rock");
-    //     } else {
-    //         console.log("You win, paper");
-    //     }
-    // }
 
-    switch (randomChoice()) {
+    // returns the result based on user and Random choice
+    switch (choice) {
         case "paper":
-            if (ran === "scissors") { console.log("You lose, scissors"); }
-            else if (ran === "rock") { console.log("You win, rock"); }
-            else { console.log("Draw, paper"); }
+            if (ran === "scissors") {
+                computerScore += 1;
+                computerScore_span.innerHTML = computerScore;
+                winnerText.innerHTML = "Scissors beats" + " " + choice;
+            }
+            else if (ran === "rock") {
+                userScore += 1;
+                userScore_span.innerHTML = userScore;
+                winnerText.innerHTML = "Rock loses to " + choice + " :P";
+            }
+            else {
+                winnerText.innerHTML = "Draw!";
+            }
             break;
         case "rock":
-            if (ran === "scissors") { console.log("You win, scissors"); }
-            else if (ran === "rock") { console.log("Draw, rock");; }
-            else { console.log("You lose, paper"); }
+            if (ran === "scissors") {
+                userScore += 1;
+                userScore_span.innerHTML = userScore;
+                winnerText.innerHTML = "Scissors loses to " + choice + " :P";
+            }
+            else if (ran === "rock") {
+                winnerText.innerHTML = "Draw!";
+            }
+            else {
+                computerScore += 1;
+                computerScore_span.innerHTML = computerScore;
+                winnerText.innerHTML = "Paper beats" + " " + choice;
+            }
             break;
         case "scissors":
-            if (ran === "scissors") { console.log("Draw, scissors"); }
-            else if (ran === "rock") { console.log("You lose, rock"); }
-            else { console.log("You win, paper"); }
+            if (ran === "scissors") {
+                winnerText.innerHTML = "Draw!";
+            }
+            else if (ran === "rock") {
+                computerScore += 1;
+                computerScore_span.innerHTML = computerScore;
+                winnerText.innerHTML = "Rock beats" + " " + choice;
+            }
+            else {
+                userScore += 1;
+                userScore_span.innerHTML = userScore;
+                winnerText.innerHTML = "Paper loses to " + choice + " :P";
+            }
             break;
     }
 }
 
+// Returns a random Choice
 function randomChoice() {
     let arr = ["rock", "paper", "scissors"]
     return arr[Math.floor(Math.random() * 3)];

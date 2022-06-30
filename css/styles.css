@@ -10,13 +10,14 @@
 
 body {
     background: #2E3D3C;
-    
-    margin-bottom: 400px;
+    margin-bottom: 50px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .header {
     text-align: center;
-    font-style: bold;
+    font-weight: 700;
+    font-style: italic;
     font-size: 40px;
     background-color: antiquewhite;
     padding: 25px;
@@ -34,7 +35,7 @@ body {
 
 .score-board {
     color: antiquewhite;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
     margin-top: 20px;
@@ -42,17 +43,18 @@ body {
 
 }
 
-.winner {
+#winner {
     font-size: 40px;
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
     text-align: center;
     color: antiquewhite;
+    margin-top: 20px;
 }
 
 .img-container {
     display: flex;
     margin-left: calc(100% / 2 - var(--imgWidth) / 2);
-    margin-top: 60px;
+    margin-top: 25px;
 
 }
 
@@ -73,22 +75,5 @@ body {
     text-shadow: 5px 2px 3px rgb(0 0 0/20%);
     text-align: center;
     color: antiquewhite;
-    margin-top: 10px;
-    animation: scaling 2s ease-in-out;
-    animation-iteration-count: infinite;
-    
-}
-
-@keyframes scaling {
-    0%{
-        transform: scale(.85);
-    }
-    50%{
-        transform: scale(1.15);
-    }
-    100%{
-        transform: scale(.85);
-    }
-
-    
+    margin: 15px auto;
 }
